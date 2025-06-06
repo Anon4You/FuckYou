@@ -74,7 +74,7 @@ Total passwords generated: 5248
 
 ## 📜 License
 
-MIT License - See [LICENSE](LICENSE) file
+ BSD-3-Clause license - See [LICENSE](LICENSE) file
 
 ---
 
