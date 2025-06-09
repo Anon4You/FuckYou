@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="1.0"
+VERSION="1.0.1"
 TOOL_NAME="FuckYou password generator"
 
 # ANSI Color Codes
@@ -19,19 +19,19 @@ print_banner() {
     if [ "$QUIET" = false ]; then
         echo -e "${PURPLE}"
         echo -e "ㅤㅤㅤㅤㅤㅤ${GREEN}Me: ${WHITE}"
-        echo "⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⡀"
-        echo "⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-        echo "⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-        echo "⠀⠀⠀⠀⠀⠀⣴⣶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-        echo "⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+        echo -e "⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣦⡀"
+        echo -e "⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+        echo -e "⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+        echo -e "⠀⠀⠀⠀⠀⠀⣴⣶⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+        echo -e "⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
         echo -e "⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣧⠀⠀⠀. ${GREEN}YOU ${WHITE}"
-        echo "⠀⠀⠀⠀⣼⣿⣿⣿⡿⣿⣿⣆⠀⠀⠀⠀⠀⠀⣠⣴⣶⣤⡀⠀"
-        echo "⠀⠀⠀⢰⣿⣿⣿⣿⠃⠈⢻⣿⣦⠀⠀⠀⠀⣸⣿⣿⣿⣿⣷⠀"
-        echo "⠀⠀⠀⠘⣿⣿⣿⡏⣴⣿⣷⣝⢿⣷⢀⠀⢀⣿⣿⣿⣿⡿⠋⠀"
-        echo "⠀⠀⠀⠀⢿⣿⣿⡇⢻⣿⣿⣿⣷⣶⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀"
-        echo "⠀⠀⠀⠀⢸⣿⣿⣇⢸⣿⣿⡟⠙⠛⠻⣿⣿⣿⣿⡇⠀⠀⠀⠀"
-        echo "⣴⣿⣿⣿⣿⣿⣿⣿⣠⣿⣿⡇⠀⠀⠀⠉⠛⣽⣿⣇⣀⣀⣀⠀"
-        echo "⠙⠻⠿⠿⠿⠿⠿⠟⠿⠿⠿⠇⠀⠀⠀⠀⠀⠻⠿⠿⠛⠛⠛⠃"
+        echo -e "⠀⠀⠀⠀⣼⣿⣿⣿⡿⣿⣿⣆⠀⠀⠀⠀⠀⠀⣠⣴⣶⣤⡀⠀"
+        echo -e "⠀⠀⠀⢰⣿⣿⣿⣿⠃⠈⢻⣿⣦⠀⠀⠀⠀⣸⣿⣿⣿⣿⣷⠀"
+        echo -e "⠀⠀⠀⠘⣿⣿⣿⡏⣴⣿⣷⣝⢿⣷⢀⠀⢀⣿⣿⣿⣿⡿⠋⠀"
+        echo -e "⠀⠀⠀⠀⢿⣿⣿⡇⢻⣿⣿⣿⣷⣶⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀"
+        echo -e "⠀⠀⠀⠀⢸⣿⣿⣇⢸⣿⣿⡟⠙⠛⠻⣿⣿⣿⣿⡇⠀⠀⠀⠀"
+        echo -e "⣴⣿⣿⣿⣿⣿⣿⣿⣠⣿⣿⡇⠀⠀⠀⠉⠛⣽⣿⣇⣀⣀⣀⠀"
+        echo -e "⠙⠻⠿⠿⠿⠿⠿⠟⠿⠿⠿⠇⠀⠀⠀⠀⠀⠻⠿⠿⠛⠛⠛⠃"
         echo -e "${NC}"
         echo -e "${RED}$TOOL_NAME ${WHITE}v$VERSION${NC}"
         echo -e "${CYAN}By Alienkrishn${NC}"
@@ -193,30 +193,30 @@ interactive_mode() {
     echo -e "${YELLOW}╔══════════════════════════════════════╗"
     echo -e "║          ${WHITE}PERSONAL INFORMATION${YELLOW}        ║"
     echo -e "╚══════════════════════════════════════╝${NC}"
-    get_name "Enter your first name" FIRST_NAME true
-    get_name "Enter your surname" SURNAME false
-    get_name "Enter your nickname" NICKNAME false
-    get_date "Enter your birthday" BIRTHDAY
+    get_name "Enter first name" FIRST_NAME true
+    get_name "Enter surname" SURNAME false
+    get_name "Enter nickname" NICKNAME false
+    get_date "Enter birthday" BIRTHDAY
     
     echo -e "\n${YELLOW}╔══════════════════════════════════════╗"
     echo -e "║           ${WHITE}PARTNER INFORMATION${YELLOW}        ║"
     echo -e "╚══════════════════════════════════════╝${NC}"
-    get_name "Enter your partner's name" PARTNERS_NAME false
-    get_name "Enter your partner's nickname" PARTNERS_NICKNAME false
-    get_date "Enter your partner's birthday" PARTNERS_BIRTHDAY
+    get_name "Enter partner's name" PARTNERS_NAME false
+    get_name "Enter partner's nickname" PARTNERS_NICKNAME false
+    get_date "Enter partner's birthday" PARTNERS_BIRTHDAY
     
     echo -e "\n${YELLOW}╔══════════════════════════════════════╗"
     echo -e "║            ${WHITE}CHILD INFORMATION${YELLOW}         ║"
     echo -e "╚══════════════════════════════════════╝${NC}"
-    get_name "Enter your child's name" CHILDS_NAME false
-    get_name "Enter your child's nickname" CHILDS_NICKNAME false
-    get_date "Enter your child's birthday" CHILDS_BIRTHDAY
+    get_name "Enter child's name" CHILDS_NAME false
+    get_name "Enter child's nickname" CHILDS_NICKNAME false
+    get_date "Enter child's birthday" CHILDS_BIRTHDAY
     
     echo -e "\n${YELLOW}╔══════════════════════════════════════╗"
     echo -e "║            ${WHITE}OTHER INFORMATION${YELLOW}         ║"
     echo -e "╚══════════════════════════════════════╝${NC}"
-    get_name "Enter your pet's name" PETS_NAME false
-    get_name "Enter your company name" COMPANY_NAME false
+    get_name "Enter pet's name" PETS_NAME false
+    get_name "Enter company name" COMPANY_NAME false
     
     echo -ne "${CYAN}Enter any extra keywords (space separated): ${WHITE}"
     read -r EXTRA_KEYWORDS
@@ -323,6 +323,10 @@ generate_wordlist() {
             done
             # Double digits
             for num in {00..99}; do
+                echo "${word}${num}" >> "${temp_file}_numbers"
+            done
+            # Three digit num
+            for num in {000..999}; do
                 echo "${word}${num}" >> "${temp_file}_numbers"
             done
             # Common years
